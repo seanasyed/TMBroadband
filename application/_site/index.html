@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>EQUniform Database</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="icon" href="trojanhead.png" />
+		<script type="text/javascript" src=""></script>
+	</head>
+	<body>
+		<script>
+			function authenticate() {
+				var xhttp = new XMLHttpRequest(); 
+				xhttp.open("POST", "EQUniformServlet.java", false); 
+				xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				xhttp.onReadyStateChange = function() {
+					document.getElementById("result").innerHTML = this.responseText; 
+				}
+				xhttp.send("field=authenticate&username=" + document.login.username.value + "&password=" + document.login.password.value);
+			}
+		</script>
+		<img src="trojanhead.png" />
+		<form name="login" onsubmit="authenticate()">
+			<br /><br />To continue, you must sign in.<br />
+			Username: <input type="text" name="username" />&emsp;&emsp;&emsp;&emsp;Password: <input type="password" name="password" /><br />
+			<input type="submit" value="Login" />
+		</form>
+		<div id="result">
+		</div>
+	</body>
+</html>
