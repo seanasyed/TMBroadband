@@ -16,9 +16,8 @@ img {
 	font: 2em calibri, serif;
 	text-align: center; 
 	color: #FFC72C;
-	width: 14.25em; 
-	position: absolute; 
-	left: 34%; 
+	margin: auto;
+  	width: 400px;
 }
 
 #message:hover span {
