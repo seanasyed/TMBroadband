@@ -48,12 +48,24 @@
 	        initApp()
 	      });
 	    </script>
-	    
+	    <script>
+	    	var w = new Worker('polling.js'); 
+	    	
+	    	w.addEventListener('message', function(e) {
+	    		
+	    		//For testing purposes, log the messages
+	    		console.log(e.data); 
+	    	}); 
+	    	
+	    	w.postMessage('poll'); 
+	    	
+	    	
+	    </script>
 	    
 	</head>
 	<body>
 		
-		
+		This message is able to print on a separate thread. 
 		
 	</body>
 	
