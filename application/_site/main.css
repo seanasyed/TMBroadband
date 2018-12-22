@@ -77,3 +77,54 @@ img {
 	top: 1.5em; 
 	left: 43em; 
 }
+
+	#signOutButton:hover {
+		background: #FFC72C; 
+		color: #990000; 
+	}
+
+.info {
+	font-size: 1.8em; 
+	color: #FFC72C;
+	position: absolute; 
+}
+
+#lastName {
+	top: 3.5em; 
+	left: 2em; 
+}
+
+#firstName {
+	top: 3.5em; 
+	left: 12em; 
+}
+
+#class {
+	top: 3.5em; 
+	left: 23em; 
+}
+
+#email {
+	top: 3.5em; 
+	left: 34em; 
+}
+
+#id {
+	top: 26.5em; 
+	left: 34em; 
+}
+
+#instrument {
+	top: 5.5em; 
+	left: 26em; 
+}
+
+#model {
+	top: 7em; 
+	left: 26em; 
+}
+
+#locker {
+	top: 9.5em; 
+	left: 26em
+}
