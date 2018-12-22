@@ -27,3 +27,30 @@ img {
 #message:hover:before {
 	content: "Nobody gets through the band."; 
 }
+
+#infoBox {
+	display: block; 
+	margin: auto; 
+	width: 90%;
+	height: 50em; 
+	border: 2px solid #FFC72C; 
+	border-radius: 20px;
+	
+}
+
+#vert {
+	background: #FFC72C; 
+	border: none; 
+	height: 45em;  
+	position: absolute; 
+	top: 9%; 
+	left: 50%; 
+}
+
+#horiz {
+	background: #FFC72C; 
+	border: none; 
+	width: 80.1em; 
+	position: absolute; 
+	top: 8%; 
+}
