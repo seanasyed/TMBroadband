@@ -31,8 +31,9 @@ img {
 #infoBox {
 	display: block; 
 	margin: auto; 
-	width: 90%;
-	height: 50em; 
+	margin-top: 2em; 
+	width: 85em;
+	height: 45em; 
 	border: 2px solid #FFC72C; 
 	border-radius: 20px;
 	
@@ -41,16 +42,26 @@ img {
 #vert {
 	background: #FFC72C; 
 	border: none; 
-	height: 45em;  
+	height: 36em;  
 	position: absolute; 
-	top: 9%; 
+	top: 9.5em; 
 	left: 50%; 
 }
 
 #horiz {
 	background: #FFC72C; 
-	border: none; 
-	width: 80.1em; 
+	border: 0.25px solid #FFC72C;
+	width: 85em; 
 	position: absolute; 
-	top: 8%; 
+	top: 5em;
+	left: 2.5em;  
+}
+
+#horiz2 {
+	background: #FFC72C; 
+	border: 0.25px solid #FFC72C;
+	width: 85em; 
+	position: absolute; 
+	top: 8.5em;
+	left: 2.5em;  
 }
