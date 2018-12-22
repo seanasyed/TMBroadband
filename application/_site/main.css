@@ -65,3 +65,15 @@ img {
 	top: 8.5em;
 	left: 2.5em;  
 }
+
+button {
+	border: 1px solid #FFC72C; 
+	background: #990000; 
+	border-radius: 2px; 
+	font-weight: lighter; 
+	font-size: 1.8em; 
+	color: #FFC72C;
+	position: absolute; 
+	top: 3.4em; 
+	left: 43.96em; 
+}
