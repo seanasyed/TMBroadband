@@ -9,10 +9,17 @@ self.addEventListener('message', function(e) {
 	    rawFile.onreadystatechange = function ()
 	    {
 	        if (rawFile.responseText != null) {
-	        	console.log(rawFile.responseText); 
+	        	
+	        	postMessage(rawFile.responseText); 
+	        	
+	        	$.ajax({
+	    		   url: 'removefile.php',
+	    		   type: 'post'
+	    		  });
+	        	
 	        }
 	    }
-	    rawFile.send(null);
+	    rawFile.send();
 		
 	}
 	

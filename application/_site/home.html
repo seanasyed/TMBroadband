@@ -49,9 +49,10 @@
     	var w = new Worker('polling.js'); 
     	
     	w.addEventListener('message', function(e) {
-    		
-    		//For testing purposes, log the messages
-    		console.log(e.data); 
+    	
+    		if (document.getElementById("idIn").value != e.data) {
+    			document.getElementById("idIn").value = e.data; 
+    		}
     	}); 
     	
     	w.postMessage('poll'); 
