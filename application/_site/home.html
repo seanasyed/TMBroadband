@@ -19,8 +19,6 @@
 		    messagingSenderId: "106316365039"
 		  };
 		  firebase.initializeApp(config);
-		</script>
-		<script type="text/javascript">
 	      initApp = function() {
 	        firebase.auth().onAuthStateChanged(function(user) {
 	          if (user) {
@@ -47,21 +45,17 @@
 	      window.addEventListener('load', function() {
 	        initApp()
 	      });
-	    </script>
-	    <script>
-	    	var w = new Worker('polling.js'); 
-	    	
-	    	w.addEventListener('message', function(e) {
-	    		
-	    		//For testing purposes, log the messages
-	    		console.log(e.data); 
-	    	}); 
-	    	
-	    	w.postMessage('poll'); 
-	    	
-	    	
-	    </script>
-	    <script>
+	    
+    	var w = new Worker('polling.js'); 
+    	
+    	w.addEventListener('message', function(e) {
+    		
+    		//For testing purposes, log the messages
+    		console.log(e.data); 
+    	}); 
+    	
+    	w.postMessage('poll'); 
+	    
 	    function signOut() {
 	    	firebase.auth().signOut().then(function() {
 	    		  console.log('Signed Out');
@@ -70,8 +64,32 @@
 	    		  console.error('Sign Out Error', error);
 	    		});
 	    }
-	    </script>
 	    
+	    function clearFields() {
+	    	document.getElementById("lastIn").value = ""; 
+	    	document.getElementById("firstIn").value = ""; 
+	    	document.getElementById("classIn").value = ""; 
+	    	document.getElementById("emailIn").value = ""; 
+	    	document.getElementById("jacketIn").value = ""; 
+	    	document.getElementById("notesIn").value = ""; 
+	    	document.getElementById("capeIn").value = ""; 
+	    	document.getElementById("pantsIn").value = ""; 
+	    	document.getElementById("hangerIn").value = ""; 
+	    	document.getElementById("helmetIn").value = ""; 
+	    	document.getElementById("statusIn").value = ""; 
+	    	document.getElementById("depositIn").value = ""; 
+	    	document.getElementById("idIn").value = ""; 
+	    	document.getElementById("instrumentIn").value = ""; 
+	    	document.getElementById("modelIn").value = ""; 
+	    	document.getElementById("lockerIn").value = ""; 
+	    	document.getElementById("comboIn").value = ""; 
+	    	
+	    	console.log("All fields cleared."); 
+	    }
+	    
+	    var database = firebase.database(); 
+	    
+	    </script>
 	</head>
 	<body>
 		<div id="infoBox">
@@ -82,7 +100,7 @@
 		<button type="button" class="button" id="signOutButton" onclick="signOut()">Sign Out</button>
 		<button type="button" class="button" id="saveButton" onclick="save()">Save</button>
 		<button type="button" class="button" id="searchButton" onclick="search()">Search</button>
-		<button type="button" class="button" id="clearButton" onclick="clear()">Clear</button>
+		<button type="button" class="button" id="clearButton" onclick="clearFields()">Clear</button>
 		<button type="button" class="button" id="inventoryButton" onclick="inventory()">Inventory</button>
 		<button type="button" class="button" id="mailMergeButton" onclick="mailMerge()">Mail Merge</button>
 		<button type="button" class="button" id="copyButton" onclick="copy()">Copy to Current Term</button>
