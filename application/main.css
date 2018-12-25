@@ -128,3 +128,55 @@ img {
 	top: 9.5em; 
 	left: 26em
 }
+
+#combo {
+	top: 11em; 
+	left: 26em; 
+}
+
+#eqnotes {
+	top: 14.5em; 
+	left: 26em; 
+}
+
+#jacket {
+	top: 5.5em; 
+	left: 2em; 
+}
+
+#cape {
+	top: 7em; 
+	left: 2em; 
+}
+
+#pants {
+	top: 8.5em; 
+	left: 2em; 
+}
+
+#hanger {
+	top: 10em; 
+	left: 2em; 
+}
+
+#helmet {
+	top: 11.5em; 
+	left: 2em; 
+}
+
+#uninotes {
+	top: 14.5em; 
+	left: 2em; 
+}
+
+#deposit {
+	top: 26.5em; 
+	left: 2em; 
+}
+
+input {
+	font: 1em calibri; 
+	color: #FFC72C; 
+	background: #990000; 
+	width: 7em;
+}
