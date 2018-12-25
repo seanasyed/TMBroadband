@@ -1,6 +1,21 @@
 self.addEventListener('message', function(e) {
+	
+	var file = new File([], "input.txt"); 
+	
 	while (true) {
-		//poll the JSON file to see if the id was updated
+		
+		var rawFile = new XMLHttpRequest();
+	    rawFile.open("GET", "input.txt", false);
+	    rawFile.onreadystatechange = function ()
+	    {
+	        if (rawFile.responseText != null) {
+	        	console.log(rawFile.responseText); 
+	        }
+	    }
+	    rawFile.send(null);
+		
 	}
+	
+	 
 	
 }); 
