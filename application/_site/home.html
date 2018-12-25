@@ -71,7 +71,8 @@
 	    	document.getElementById("classIn").value = ""; 
 	    	document.getElementById("emailIn").value = ""; 
 	    	document.getElementById("jacketIn").value = ""; 
-	    	document.getElementById("notesIn").value = ""; 
+	    	document.getElementById("EQNotesIn").value = ""; 
+	    	document.getElementById("uniNotesIn").value = ""; 
 	    	document.getElementById("capeIn").value = ""; 
 	    	document.getElementById("pantsIn").value = ""; 
 	    	document.getElementById("hangerIn").value = ""; 
@@ -98,12 +99,12 @@
 		<hr id="horiz" width="500" size="0.5">
 		<hr id="horiz2" width="500" size="0.5">
 		<button type="button" class="button" id="signOutButton" onclick="signOut()">Sign Out</button>
-		<button type="button" class="button" id="saveButton" onclick="save()">Save</button>
-		<button type="button" class="button" id="searchButton" onclick="search()">Search</button>
+		<button type="button" class="button" id="saveButton" onclick="saveFields()">Save</button>
+		<button type="button" class="button" id="searchButton" onclick="searchFields()">Search</button>
 		<button type="button" class="button" id="clearButton" onclick="clearFields()">Clear</button>
-		<button type="button" class="button" id="inventoryButton" onclick="inventory()">Inventory</button>
-		<button type="button" class="button" id="mailMergeButton" onclick="mailMerge()">Mail Merge</button>
-		<button type="button" class="button" id="copyButton" onclick="copy()">Copy to Current Term</button>
+		<button type="button" class="button" id="inventoryButton" onclick="inventoryFields()">Inventory</button>
+		<button type="button" class="button" id="mailMergeButton" onclick="mailMergeFields()">Mail Merge</button>
+		<button type="button" class="button" id="copyButton" onclick="copyFields()">Copy to Current Term</button>
 		<div class="info" id="lastName">
 			Last: <input type="text" id="lastIn"/>
 		</div>
@@ -132,7 +133,7 @@
 			Combo: <input type="text" id="comboIn" />
 		</div>
 		<div class="info" id="eqnotes">
-			Notes: <textarea id="notesIn"></textarea>
+			Notes: <textarea id="EQNotesIn"></textarea>
 		</div>
 		<div class="info" id="jacket">
 			Jacket: <input type="text" id="jacketIn" />
@@ -153,7 +154,7 @@
 			Status: <input type="text" id="statusIn" />
 		</div>
 		<div class="info" id="uninotes">
-			Notes: <textarea id="notesIn"></textarea>
+			Notes: <textarea id="uniNotesIn"></textarea>
 		</div>
 		<div class="info" id="deposit">
 			Deposit: <input type="text" id="depositIn" />

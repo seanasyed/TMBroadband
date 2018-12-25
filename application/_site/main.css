@@ -238,7 +238,14 @@ textarea {
 	width: 10em; 
 }
 
-#notesIn {
+#uniNotesIn {
+	position: fixed; 
+	top: 16em; 
+	width: 22em; 
+	height: 8em; 
+}
+
+#EQNotesIn {
 	position: fixed; 
 	top: 16em; 
 	width: 22em; 
