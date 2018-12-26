@@ -1,6 +1,6 @@
 <?php
 
-unlink('input.txt'); 
+unlink("input.txt"); 
 
 
 ?>

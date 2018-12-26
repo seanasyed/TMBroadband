@@ -5,7 +5,7 @@ self.addEventListener('message', function(e) {
 	while (true) {
 		
 		var rawFile = new XMLHttpRequest();
-	    rawFile.open("GET", "input.txt", false);
+	    rawFile.open("GET", "input.txt", true);
 	    rawFile.onreadystatechange = function ()
 	    {
 	        if (rawFile.responseText != null) {
@@ -14,7 +14,10 @@ self.addEventListener('message', function(e) {
 	        	
 	        	$.ajax({
 	    		   url: 'removefile.php',
-	    		   type: 'post'
+	    		   type: 'POST', 
+	    		   data: {
+	    			   
+	    		   }
 	    		  });
 	        	
 	        }
