@@ -11,7 +11,7 @@ to pull a given bandsman's information based on the information stored within th
 ## Repository Format
 
 The original approach was to utilize Github Pages in order to host the website easily. Given the fact that we are looking to update information dynamically based on an RFID reader, the website is currently being migrated to
-an Apache web server that will (hopefully) be run on a Raspberry Pi. The static website in its semi-functional glory can be viewed in the application folder. 
+an Apache web server that will (hopefully) be run on a Raspberry Pi. The static website in its semi-functional glory can be viewed in the *application* folder. 
 
 All of the RFID software will be in the rfid folder. 
 
