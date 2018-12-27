@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>EQUniform Database</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="icon" href="trojanhead.png" />
+		<script type="text/javascript" src=""></script>
+		<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyC7VFaPLjxXwTmIJRPlz0Qt9mhLTH2Dfko",
+		    authDomain: "tmbroadband-80256.firebaseapp.com",
+		    databaseURL: "https://tmbroadband-80256.firebaseio.com",
+		    projectId: "tmbroadband-80256",
+		    storageBucket: "tmbroadband-80256.appspot.com",
+		    messagingSenderId: "106316365039"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
+		<script type="text/javascript">
+	      // FirebaseUI config.
+	      var uiConfig = {
+	    		  
+   		  callbacks: {
+   	          signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+   	            var user = authResult.user;
+   	            var credential = authResult.credential;
+   	            var isNewUser = authResult.additionalUserInfo.isNewUser;
+   	            var providerId = authResult.additionalUserInfo.providerId;
+   	            var operationType = authResult.operationType;
+   	            // Do something with the returned AuthResult.
+   	            // Return type determines whether we continue the redirect automatically
+   	            // or whether we leave that to developer to handle.
+   	            return true;
+   	          },
+   	          signInFailure: function(error) {
+   	            // Some unrecoverable error occurred during sign-in.
+   	            // Return a promise when error handling is completed and FirebaseUI
+   	            // will reset, clearing any UI. This commonly occurs for error code
+   	            // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+   	            // occurs. Check below for more details on this.
+   	            return handleUIError(error);
+   	          },
+   	          uiShown: function() {
+   	            // The widget is rendered.
+   	            // Hide the loader.
+   	            document.getElementById('loader').style.display = 'none';
+   	          }
+   	        },
+   	        credentialHelper: firebaseui.auth.CredentialHelper.NONE,
+	        signInSuccessUrl: 'home.html',
+	        signInOptions: [
+	          // Leave the lines as is for the providers you want to offer your users.
+	          
+	          {
+			      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+			      // Use email link authentication and do not require password.
+			      // Note this setting affects new users only.
+			      // For pre-existing users, they will still be prompted to provide their
+			      // passwords on sign-in.
+			      signInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD,
+			      // Allow the user the ability to complete sign-in cross device, including
+			      // the mobile apps specified in the ActionCodeSettings object below.
+			      forceSameDevice: false,
+			      // Used to define the optional firebase.auth.ActionCodeSettings if
+			      // additional state needs to be passed along request and whether to open
+			      // the link in a mobile app if it is installed.
+			      emailLinkSignIn: function() {
+			        return {
+			          // Additional state showPromo=1234 can be retrieved from URL on
+			          // sign-in completion in signInSuccess callback by checking
+			          // window.location.href.
+			          url: 'https://www.example.com/completeSignIn?showPromo=1234',
+			          // Custom FDL domain.
+			          dynamicLinkDomain: 'example.page.link',
+			          // Always true for email link sign-in.
+			          handleCodeInApp: true,
+			          // Whether to handle link in iOS app if installed.
+			          iOS: {
+			            bundleId: 'com.example.ios'
+			          },
+			          // Whether to handle link in Android app if opened in an Android
+			          // device.
+			          android: {
+			            packageName: 'com.example.android',
+			            installApp: true,
+			            minimumVersion: '12'
+			          }
+			        };
+			      }
+			    }
+	        ],
+	        // tosUrl and privacyPolicyUrl accept either url string or a callback
+	        // function.
+	        // Terms of service url/callback.
+	        tosUrl: 'https://www.youtube.com/watch?v=KUFqIYBCw_o&feature=youtu.be',
+	        // Privacy policy url/callback.
+	        privacyPolicyUrl: 'https://youtu.be/876tVedX1WU?t=7'
+	      };
+	
+	      // Initialize the FirebaseUI Widget using Firebase.
+	      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+	      // The start method will wait until the DOM is loaded.
+	      ui.start('#firebaseui-auth-container', uiConfig);
+	      
+	   	</script>
+	</head>
+	<body>
+		
+		<img src="trojanhead.png" />
+		<div id="message">
+			<span>You must sign in to continue.</span>
+			<div id="loader">Loading...</div>
+		</div>
+		<br /><br />
+		<div id="firebaseui-auth-container"></div>
+		
+	</body>
+	
+	
+	
+</html>

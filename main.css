@@ -66,7 +66,7 @@ img {
 	left: 2.5em;  
 }
 
-#signOutButton {
+.button {
 	border: 1px solid #FFC72C; 
 	background: #990000; 
 	border-radius: 2px; 
@@ -75,13 +75,40 @@ img {
 	color: #FFC72C;
 	position: absolute; 
 	top: 1.5em; 
-	left: 43em; 
-}
+}	
 
-	#signOutButton:hover {
+	.button:hover {
 		background: #FFC72C; 
 		color: #990000; 
 	}
+
+#signOutButton {
+	left: 43em; 
+}
+
+#saveButton {
+	left: 3em; 
+}
+
+#searchButton {
+	left: 6em; 
+}
+
+#clearButton {
+	left: 9.9em; 
+}
+
+#inventoryButton {
+	left: 16.6em; 
+}
+
+#mailMergeButton {
+	left: 21.3em; 
+}
+
+#copyButton {
+	left: 26.8em; 
+}
 
 .info {
 	font-size: 1.8em; 
@@ -174,9 +201,53 @@ img {
 	left: 2em; 
 }
 
+#term {
+	position: absolute; 
+	top: 26.5em; 
+	left: 19em; 
+}
+
+#termSelect {
+	font: 1em calibri; 
+	color: #FFC72C; 
+	background: #990000; 
+	width: 7em; 
+}
+
+#status {
+	top: 5.5em; 
+	left: 14em; 
+}
+
 input {
 	font: 1em calibri; 
 	color: #FFC72C; 
 	background: #990000; 
 	width: 7em;
+}
+
+textarea {
+	font: 1em calibri; 
+	color: #FFC72C; 
+	background: #990000; 
+	width: 7em; 
+	
+}
+
+#emailIn {
+	width: 10em; 
+}
+
+#uniNotesIn {
+	position: fixed; 
+	top: 16em; 
+	width: 22em; 
+	height: 8em; 
+}
+
+#EQNotesIn {
+	position: fixed; 
+	top: 16em; 
+	width: 22em; 
+	height: 8em; 
 }
