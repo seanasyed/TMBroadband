@@ -52,9 +52,9 @@
        	
        	w.addEventListener('message', function(e) {
        	
-       		globalID = e.data; 
+       		
        		if (document.getElementById("idIn").value != e.data) {
-       			document.getElementById("idIn").value = globalID; 
+       			document.getElementById("idIn").value = e.data; 
        		}
        	}); 
        	
