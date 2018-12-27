@@ -1,11 +1,14 @@
 <?php 
+$currID = $_POST["id"];
 $input = fopen("input.txt", "r");
-$data = fread($input, filesize("input.txt"));
-
+$newID = fread($input, filesize("input.txt"));
 fclose($input);
 
-if (!is_null($data)) {
-    setcookie("refresh", "1");
-    setcookie("id", $data);
-}
+
+unlink("input.txt"); 
+$input = fopen("input.txt", "w"); 
+fclose($input); 
+
+echo $newID; 
+
 ?>

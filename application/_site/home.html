@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="main.css" />
 		<link rel="icon" href="trojanhead.png" />
-		<script type="text/javascript" src=""></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 		<script>
 		  // Initialize Firebase
@@ -46,16 +46,17 @@
 	        initApp()
 	      });
 	    
-    	var w = new Worker('polling.js'); 
     	
-    	w.addEventListener('message', function(e) {
-    	
-    		if (document.getElementById("idIn").value != e.data) {
-    			document.getElementById("idIn").value = e.data; 
-    		}
-    	}); 
-    	
-    	w.postMessage('poll'); 
+   		var w = new Worker('polling.js'); 
+       	
+       	w.addEventListener('message', function(e) {
+       	
+       		if (document.getElementById("idIn").value != e.data) {
+       			document.getElementById("idIn").value = e.data; 
+       		}
+       	}); 
+       	
+       	w.postMessage('poll'); 
 	    
 	    function signOut() {
 	    	firebase.auth().signOut().then(function() {
