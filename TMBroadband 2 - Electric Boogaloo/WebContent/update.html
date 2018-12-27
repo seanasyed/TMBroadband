@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script>
+			var url_string = window.location.href; 
+			var url = new URL(url_string);
+			var id = url.searchParams.get("id");
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "/IDUpdate?id=" + id, true); 
+			xhttp.onreadystatechange = function () {
+				//window.location.replace("home.html"); 
+			}
+			xhttp.send();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

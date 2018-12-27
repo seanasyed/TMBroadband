@@ -14,6 +14,7 @@ self.addEventListener('message', function(e) {
 	        }
 	    }
 	    rawFile.send(null);
+		
 	}
 	
 }); 
