@@ -1,6 +1,0 @@
-<?php
-
-unlink("input.txt"); 
-
-
-?>
