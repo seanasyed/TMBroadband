@@ -44,7 +44,9 @@ public class IDUpdate extends HttpServlet {
 			currID = request.getParameter("id"); 
 			System.out.println(currID);
 		} else {
-			
+			System.out.println("Sending " + currID);
+			request.getSession().setAttribute("id", currID);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
 		}
 		
 	}
