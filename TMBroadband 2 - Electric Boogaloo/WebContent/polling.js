@@ -1,9 +1,9 @@
 self.addEventListener('message', function(e) {
 	
 	var currID = ""; 
-	var rawFile = new XMLHttpRequest();
+	var idFetch = new XMLHttpRequest();
 	while (true) {
-		console.log('loop run'); 
+		
 	    rawFile.open("GET", "input.txt", false);
 	    rawFile.onreadystatechange = function ()
 	    {

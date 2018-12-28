@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class IDUpdate extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	private String currID = ""; 
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,10 +33,19 @@ public class IDUpdate extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		PrintWriter writer = new PrintWriter("/Users/seansyed/Documents/Code/TMBroadband/TMBroadband "
-				+ "2 - Electric Boogaloo/WebContent/input.txt");
-		writer.print(request.getParameter("id"));
-		writer.close();
+		System.out.println("Servlet called"); 
+		//Writes the new ID value to input.txt. May not be necessary after new polling implementation
+//		PrintWriter writer = new PrintWriter("/Users/seansyed/Documents/Code/TMBroadband/TMBroadband "
+//				+ "2 - Electric Boogaloo/WebContent/input.txt");
+//		writer.print(request.getParameter("id"));
+//		writer.close();
+		
+		if (request.getParameter("set") != null) {
+			currID = request.getParameter("id"); 
+			System.out.println(currID);
+		} else {
+			
+		}
 		
 	}
 
