@@ -18,6 +18,6 @@ an Apache web server that will (hopefully) be run on a Raspberry Pi. The static 
 
 All of the RFID software, when completed,  will be in the rfid folder. 
 
-The dynamic version of the website can be found under *TMBroadband 2 - Electric Boogaloo*.
+The dynamic version of the website can be found under *TMBroadband 2 - Electric Boogaloo*. It was built as a Dynamic Web Project in Eclipse, and may be imported as an existing project. 
 
 This project utilizes the Google Firebase API. In order to run the application, you will need to include your own API information stored as a *config* variable in *config.js*. This was done in order to ensure that sensitive information, such as API keys, were not visible to everyone as this is a public repository. 
