@@ -172,6 +172,9 @@
 		<div class="info" id="model">
 			Model: <input type="text" id="modelIn" />
 		</div>
+		<div class="info" id="number">
+			Number: <input type="text" id="numberIn" />
+		</div>
 		<div class="info" id="locker">
 			Locker: <input type="text" id="lockerIn" />
 		</div>

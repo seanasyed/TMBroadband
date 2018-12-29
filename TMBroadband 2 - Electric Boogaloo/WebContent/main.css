@@ -151,13 +151,18 @@ img {
 	left: 26em; 
 }
 
+#number {
+	top: 8.5em; 
+	left: 26em; 
+}
+
 #locker {
-	top: 9.5em; 
+	top: 10em; 
 	left: 26em
 }
 
 #combo {
-	top: 11em; 
+	top: 11.5em; 
 	left: 26em; 
 }
 
