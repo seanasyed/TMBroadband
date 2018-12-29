@@ -1,7 +1,5 @@
 
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -44,9 +42,12 @@ public class IDUpdate extends HttpServlet {
 			currID = request.getParameter("id"); 
 			System.out.println(currID);
 		} else {
-			System.out.println("Sending " + currID);
-			request.getSession().setAttribute("id", currID);
-			request.getRequestDispatcher("home.jsp").forward(request, response);
+			System.out.println("Sending " + "{\"id\":\"" + currID + "\"}");
+			PrintWriter out = response.getWriter(); 
+			response.setContentType("application/json");
+			response.setCharacterEncoding("UTF-8");
+			out.print("{\"id\":\"" + currID + "\"}");
+			out.flush(); 
 		}
 		
 	}
