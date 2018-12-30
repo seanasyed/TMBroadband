@@ -123,6 +123,10 @@
 	   		            if (currID != data.id) {
 	   		            	currID = data.id
 	   		            	document.getElementById("idIn").value = currID; 
+	   		            	
+	   		            	//API call to search database for given ID
+	   		            	
+	   		            	//If there's a matching document, populate the necessary fields
 	   		            }
 	   		        },
 	   				error: function(request, state, errors) {
@@ -131,7 +135,7 @@
 	   			}); 
 	   		}
 	   		
-	   		setInterval(getNewID, 1000);
+	   		setInterval(getNewID, 1);
 	   		
 	   		
 	   	}); 

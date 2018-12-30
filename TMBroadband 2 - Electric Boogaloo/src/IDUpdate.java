@@ -31,7 +31,7 @@ public class IDUpdate extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("Servlet called"); 
+		
 		//Writes the new ID value to input.txt. May not be necessary after new polling implementation
 //		PrintWriter writer = new PrintWriter("/Users/seansyed/Documents/Code/TMBroadband/TMBroadband "
 //				+ "2 - Electric Boogaloo/WebContent/input.txt");
@@ -40,9 +40,8 @@ public class IDUpdate extends HttpServlet {
 		
 		if (request.getParameter("set") != null) {
 			currID = request.getParameter("id"); 
-			System.out.println(currID);
+			
 		} else {
-			System.out.println("Sending " + "{\"id\":\"" + currID + "\"}");
 			PrintWriter out = response.getWriter(); 
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
