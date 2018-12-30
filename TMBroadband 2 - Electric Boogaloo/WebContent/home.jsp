@@ -126,6 +126,10 @@
 	   		            	
 	   		            	//API call to search database for given ID
 	   		            	
+	   		            	return firebase.database().ref("/Fall 2018/" + currID).once('value').then(function(snapshot) {
+	   		            		
+	   		            	});
+	   		            	
 	   		            	//If there's a matching document, populate the necessary fields
 	   		            }
 	   		        },
