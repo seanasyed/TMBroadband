@@ -33,6 +33,8 @@
 	            var uid = user.uid;
 	            var phoneNumber = user.phoneNumber;
 	            var providerData = user.providerData;
+	            
+	            
 	          } else {
 	            // User is signed out.
 	            /* document.getElementById('sign-in-status').textContent = 'Signed out';
@@ -126,9 +128,10 @@
 	   		            	
 	   		            	//API call to search database for given ID
 	   		            	
-	   		            	return firebase.database().ref("/Fall 2018/" + currID).once('value').then(function(snapshot) {
-	   		            		
-	   		            	});
+		   		            	return firebase.database().ref("/Fall 2018/" + currID).once('value').then(function(snapshot) {
+		   		            		console.log("successfully called");
+		   		            	});
+	   		            	
 	   		            	
 	   		            	//If there's a matching document, populate the necessary fields
 	   		            }
